@@ -6,61 +6,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            width:50%;
-            margin: auto;
+        .navbar{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+          
         }
-        #overflowTest {
-  background: #4CAF50;
-  color: rgb(7, 7, 7);
-  padding: 15px;
-  width: 50%;
-  height: 100px;
-  overflow: scroll;
-  border: 1px solid #ccc;
-}
-.para span{
-    display:inline-block;
-    background-color: red;
-}
-ul{
-    width: auto;
-    height: 100px;
-    background-color: #4CAF50;
-    /* margin: 0; */
-    padding: 0;
-    text-align: center;
-}
-ul li{
-    list-style-type: none;
-    display: inline-block;
-    background-color: red;
-    line-height: 100px;
-    
-}
-ul li a{
-    color: white;
-    text-decoration: none;
-}
-    </style>
+        .navbar ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li{
+            float: left;
+        }
+        li a{
+            text-decoration: none;
+            display: block;
+            padding: 0 20px;
+            line-height: 50px;
+            color: white;
+        }
+        li a:hover:not(.active){
+            background-color: grey;
+        }
+        li .active{
+            background-color: seagreen;
+        }
+        .dropdown-menu{
+            position: relative;
+            display: inline-block;
+        }
+        .drop-button{
+          padding: 30px;  
+          border: 2px solid black;
+          background-color: seagreen;
+          color:white;
+          text-transform: uppercase;
+          font-size: 2vw;
+          cursor: pointer;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        }
+        .dropdown-content{
+            display: none;
+        }
+        .dropdown-content a{
+            display: block;
+            padding: 25px;
+            border: 2px solid black;
+            background-color: seagreen;
+            color:white;
+            color: wheat;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        }
+        .dropdown-menu:hover .dropdown-content {
+            display: block;
+        }
+        .gallery .image{
+            float: left;
+            margin: 10px;
+            padding: 10px;
+        }
+        .description{
+            text-align: center;
+        }
+        .gallery img{
+            width: 100%;
+        }
+        .gallery .image:hover{
+            border: 2px solid black;
+        }
+        body{
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            position:fixed;
+        }
+        .label{
+            clear: left;
+        }
+        input{
+            width: 100%;
+        }
+        input[type="text"]{
+            border-radius: 30px;
+            padding: 20px;
+        }
+        input[type="text"]:focus{
+            background-color: aqua;
+        }
+        input[type="button"]{
+            border-radius: 30px;
+            padding: 20px;
+        }
+        input[type="button"]:focus{
+            background-color: aqua;
+        }
+            </style>
 </head>
 <body>
-    <h2>CSS Overflow</h2>
+    <div class="navbar">
+        <ul>
+            <li><a class="active" href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JAVASCIPT</a></li>
+            <li><a href="#">SQL</a></li>
+            <li><a href="#">PYTHON</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">BOOTSTRAP</a></li>
+        </ul>
+    </div>
+    <br><br><br><br>
+    <div class="dropdown-menu">
+        <button class="drop-button">my family</button>
+        <div class="dropdown-content">
+            <a href="#">lakshmanarao</a>
+            <a href="#">jagannadhamma</a>
+            <a href="#">venkatesh</a>
+            <a href="#">gayithri</a>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="image">
+            <a href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="pink nature" max-width="100px" height="100px">
+            </a>
+            <div class="description">
+                add a description of the image
+            </div>
+        </div>
+        <div class="image">
+            <a href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="pink nature" max-width="100px" height="100px">
+            </a>
+            <div class="description">
+                add a description of the image
+            </div>
+        </div> 
+        <div class="image">
+            <a href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="pink nature" max-width="100px" height="100px">
+            </a>
+            <div class="description">
+                add a description of the image
+            </div>
+        </div>
+        <div class="image">
+            <a href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="pink nature" max-width="100px" height="100px">
+            </a>
+            <div class="description">
+                add a description of the image
+            </div>
+        </div> 
+        <br><br>
+        <div class="label">
+            <label for="name">Name</label>
+            <input type="text" placeholder="enter your name">
+            <input type="button" value="submit">
+        </div>
+       
 
-<p>The overflow property controls what happens to content that is too big to fit into an area.</p>
-
-<div id="overflowTest">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
-<div class="para">
-   <span>venkatesh</span>
-   <span>venkatesh</span>
-   <span>venkatesh</span>
-   <span>venkatesh</span>
-</div>
-<ul>
-    <li><a href="">gayithri</a></li>
-    <li><a href="">venkatesh</a></li>
-    <li><a href="">lakshmanarao</a></li>
-    <li><a href="">jagannadhamma</a></li>
-</ul>
 </body>
 </html>
