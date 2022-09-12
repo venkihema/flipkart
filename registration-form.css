@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    background-color: grey;
+}
+.main{
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    padding: 30px 30px 100px 30px;
+    border: 5px solid rgb(151, 136, 53);
+}
+.heading::first-letter{
+    color: Red;
+    font-size: 2em;
+}
+.form-left{
+    width: 40%;
+}
+.form-right{
+    width: 40%;
+}
+.form-left input{
+    display: inline-block; 
+}
+.form-right input{
+    display: inline-block;
+}
+.registration-content{
+    width: 94.5%;
+    display: flex;
+    justify-content: space-between;
+}
+input[type="text"] {
+    width: 100%;
+    background-color: rgb(76, 128, 129, 0.5);
+    height: 30px;
+    padding: 2px 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+input[type="password"] {
+    width: 100%;
+    background-color: rgb(76, 128, 129, 0.5);
+    height: 30px;
+    padding: 2px 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+input[type="number"] {
+    width: 100%;
+    background-color: rgb(76, 128, 129, 0.5);
+    height: 30px;
+    padding: 2px 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.male input{
+    display: inline-block;
+}
+.button{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+input[type="button"]{
+    padding: 10px 50px;
+    width: 100%;
+    background-color: rgb(153, 51, 139);
+    color: white;
+    font-size: 1.5em;
+    font-family: ubuntu;
+    border: 2px solid  black;
+    border-radius: 5px;
+}
